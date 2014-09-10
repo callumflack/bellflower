@@ -1,0 +1,20 @@
+!= partial("../_shared/header")
+
+.Container
+    if current.source !== "archive"
+        article.Article
+            .SectionRule
+                time= date
+            h1.ArticleTitle= title
+            != yield
+    else
+        != yield
+
+.ColophonRule
+    p.Text--emphasis.u-textCenter
+        | You should sign-up to receive future Bellflower posts in your inbox.
+
+        != partial("../_shared/newsletter")
+
+footer
+    != partial("../_shared/footer")

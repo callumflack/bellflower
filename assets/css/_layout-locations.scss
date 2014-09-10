@@ -1,0 +1,113 @@
+
+/* ==================================================================
+
+   LOCATIONS SECTION
+   For: "_section-locations.jade"
+
+   ================================================================== */
+
+.Locations {
+    p {
+        @extend .TextSans;
+    }
+
+    h4,
+    p,
+    a {
+        margin-bottom: .5rem;
+    }
+
+    h4 {
+        // font-family: join($fontBold, $sans-font-family);
+        @extend %h2;
+        // line-height: 1;
+        text-align: left;
+        margin-top: 0;
+        // margin-bottom: 0.75rem;
+    }
+}
+
+
+// Locations white var
+// ===================
+
+.Locations.Locations--white {
+    margin-top: 0;
+
+    h4,
+    p,
+    a,
+    p > span {
+        color: white;
+    }
+}
+
+
+// Locations footer var
+// ====================
+
+.Locations.Locations--footer {
+    margin-top: 0;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid lighten($cText,77%);
+}
+
+
+// Mobile-only locations section
+// USe this class w/ '.HideDesk'
+// =============================
+
+.LocationsContainer--sm {
+    background-color: $cNeutral;
+    padding: 1.5rem 0;
+
+    .Locations {
+        margin-top: 0;
+    }
+}
+
+/* Ruled div holding social icons */
+
+p.Ruled {
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+    padding-top: 1.75rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid $cLite;
+    text-align: center;
+
+    > a {
+        font-size: 30px;
+        color: $cText20;
+        margin-bottom: 0;
+    }
+}
+
+/* Social icons w/i contact column */
+
+.Grid.u-cf {
+    .socialIcon {
+        margin-top: rem(12);
+
+        > a {
+            text-decoration: none;
+        }
+
+        > a i {
+            font-size: 32px;
+            color: lighten($cText,40%);
+            margin-bottom: 0;
+        }
+
+        a + a {
+            margin-left: 8px;
+        }
+    }
+}
+
+header .Grid.u-cf .socialIcon {
+    > a i {
+        color: $cText20;
+    }
+}
+

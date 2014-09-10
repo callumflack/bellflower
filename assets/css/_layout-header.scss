@@ -1,0 +1,147 @@
+
+/* ==================================================================
+
+    HEADER THEME
+    For: "_header.jade", "_header-blog.jade"
+
+   ================================================================== */
+
+
+/**
+ * Responsive cover image
+ *
+ * http://nicolasgallagher.com/flexible-css-cover-images/
+ * Requires: https://github.com/suitcss/flex-embed
+ * Overwrite max height & width as required
+ */
+
+%CoverImage {
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   // background-attachment: scroll;
+   margin: 0 auto;
+   max-height: 680px;
+   max-width: 100%;
+}
+
+
+/**
+ * Cover image.
+ * Use this class with the 'header' element.
+ * 1. Import responsive cover image.
+ */
+
+.CoverImage--header {
+    @extend %CoverImage;
+    /* 1 */
+    background-image: url(/assets/img/thomas-crooks.jpg);
+
+    @include bp(lg-up) {
+        background-position: top left;
+        max-height: 900px;
+    }
+
+    @include bp(md-down) { max-height: 600px; }
+
+    @include bp(sm) { max-height: 380px; }
+
+    body.blog &,
+    body.about &,
+    body.faqs & {
+        background-image: url(/assets/img/thomas-crooks-half.jpg);
+        max-height: 360px;
+
+        @include bp(md-down) { max-height: 310px; }
+        @include bp(sm) { max-height: 200px; }
+    }
+}
+
+
+/**
+ * Flex embed for the cover image
+ * Use this class with the 'header' element.
+ */
+
+.FlexEmbed--ratio:before {
+    padding-bottom: 90%;
+
+    @include bp(md-down) { padding-bottom: 100%; }
+
+    body.blog &,
+    body.about &,
+    body.faqs & {
+        padding-bottom: 90%;
+
+        @include bp(md-down) { padding-bottom: 100%; }
+    }
+}
+
+
+/**
+ * Absolutely positioned cover headline
+ * set within the parallax header.
+ */
+
+.HeadlinePosition {
+    @extend .u-posAbsoluteCenter;
+
+    > .Container {
+        padding-top: 5.85rem;
+        padding-left: 4.75rem;
+        padding-right: 4.75rem;
+
+        @include bp(lg-up)   { padding-top: 11rem; }
+        @include bp(md-down) { padding: 82px 72px 0 72px; }
+        @include bp(sm)      { padding: 58px 25px 0 25px; }
+
+        body.blog &,
+        body.about &,
+        body.faqs & {
+            @include bp(lg-up)   { padding-top: 5.5rem; }
+            @include bp(md-down) { padding: 82px 72px 0 72px; }
+            @include bp(sm)      { padding: 48px 0 0 0; }
+        }
+    }
+
+    .ButtonContainer {
+        margin-top: 1.25rem;
+        @include bp(sm) { margin: 0; }
+    }
+}
+
+
+/**
+ * Color the header on mobile.
+ */
+
+header {
+    // @include bp(sm) { background-color: $cNeutral; }
+}
+
+
+/**
+ * Header typography theme
+ */
+
+.SiteName,
+.SiteSub,
+.SiteTag,
+.PageTitle,
+.SiteSummary {
+    text-align: center !important;
+    color: white;
+}
+
+/**
+ * Remove the .SiteTag on the home page header.
+ *
+ * The simplest method. I could use Harp's
+ * 'current' method but I think that actually
+ * makes it more complicated to manage.
+ */
+
+body.index {
+    .SiteTag { display: none; }
+}
+

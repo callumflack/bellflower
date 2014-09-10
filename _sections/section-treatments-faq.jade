@@ -1,0 +1,19 @@
+section.Expand
+
+    .Tabs.Tabs--white.is-expanded
+        .Tabs-menu
+            .Grid.Grid--withGutter.Grid--alignCenter
+                .Grid-cell.u-size1of3.u-sm-size1of3
+                    a(href="#acupuncture", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu.is-active Acupuncture
+                .Grid-cell.u-size1of3.u-sm-size1of3
+                    a(href="#chm", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Chinese Herbal Medicine
+                .Grid-cell.u-size1of3.u-sm-size1of3
+                    a(href="#shiatsu", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Adjunct Therapies
+
+        .Tabs-content
+            #acupuncture.Tabs-content--pane.is-active.is-opaque
+                != partial("section-treatments-faq-acupuncture")
+            #chm.Tabs-content--pane
+                != partial("section-treatments-faq-chm")
+            #shiatsu.Tabs-content--pane
+                != partial("section-treatments-faq-shiatsu")

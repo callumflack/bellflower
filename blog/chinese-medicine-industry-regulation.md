@@ -1,0 +1,5 @@
+As of July 1st, acupuncturists and Chinese herbalists Australia-wide have become regulated by AHPRA (Australian Health Practitioner Regulation Agency). This federal government agency is responsible for protecting the public in ensuring the provision of the highest quality health services.
+
+The inclusion of Chinese medicine under AHPRA marks an important step forward for the profession, in terms of the recognition it has now gained as an important and viable health care modality.
+
+Acupuncturists, Chinese herbalists and herbal dispensers are now required to apply for membership with AHPRA in order to legally practice their professions. While there are differing opinions within the industry about regulation, the way it has been rolled out and the issues that come with it, from my perspective it can only be good for our industry and for the people who seek acupuncture and Chinese herbal treatments. This is because of the high standard of training (both initial and ongoing) that is and will be required for practitioners to obtain and retain certification with AHPRA.  

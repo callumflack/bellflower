@@ -1,0 +1,37 @@
+section.Expand#Treatments
+    h2.SectionRule.SectionRule--neutral
+        a(href="#") Treatments used
+
+    .Expand-menu
+        .Grid.Grid--withGutter.Grid--alignCenter
+            .Grid-cell.u-size1of5.u-sm-size1of3
+                a(href="#acupuncture").u-sizeFill.u-textCenter
+                    img(src="/assets/img/icon-acupuncture-neutral.png")
+                    p.TextSans.TextSans--sm Acupuncture
+            .Grid-cell.u-size1of5.u-sm-size1of3
+                a(href="#chm").u-sizeFill.u-textCenter
+                    img(src="/assets/img/icon-tcm-neutral.png")
+                    p.TextSans.TextSans--sm Chinese Herbal Medicine
+            .Grid-cell.u-size1of5.u-sm-size1of3
+                a(href="#shiatsu").u-sizeFill.u-textCenter
+                    img(src="/assets/img/icon-shiatsu-neutral.png")
+                    p.TextSans.TextSans--sm Adjunct Therapies
+
+
+    .Tabs
+        .Tabs-menu
+            .Grid.Grid--withGutter.Grid--alignCenter
+                .Grid-cell.u-size1of3.u-sm-size1of3
+                    a(href="#acupuncture", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Acupuncture
+                .Grid-cell.u-size1of3.u-sm-size1of3
+                    a(href="#chm", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Chinese Herbal Medicine
+                .Grid-cell.u-size1of3.u-sm-size1of3
+                    a(href="#shiatsu", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Adjunct Therapies
+
+        .Tabs-content
+            #acupuncture.Tabs-content--pane
+                != partial("section-treatments-acupuncture")
+            #chm.Tabs-content--pane
+                != partial("section-treatments-chm")
+            #shiatsu.Tabs-content--pane
+                != partial("section-treatments-shiatsu")

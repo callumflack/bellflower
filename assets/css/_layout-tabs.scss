@@ -1,0 +1,234 @@
+
+/* ==================================================================
+
+    EXPANDING SECTION w/ TABS
+
+   ================================================================== */
+
+
+// Expand component
+// --------------------------------------
+
+.Expand {
+    // Space between h2 & img
+    h2.SectionRule { margin-bottom: 1.5rem; }
+
+    // Link as a block
+    a {
+        text-decoration: none;
+        border-color: transparent;
+    }
+
+    a.Text--inlineAnchor {
+        text-decoration: underline;
+    }
+
+    // Set images for @2x
+    img {
+        height: rem(80);
+
+        @include bp(sm) {
+            height: rem(60);
+        }
+    }
+
+    // account for padding in menu on FAQs page
+    .faqs & {
+        margin-top: 57px;
+    }
+}
+
+
+// Expand component menu (initial state)
+// --------------------------------------
+
+.Expand-menu {
+    // Space between p & img
+    p {
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+    }
+}
+
+.Expand-menu.is-flat {
+    height: 0;
+    overflow-y: hidden;
+}
+
+
+// Expand component tabs (expanded state)
+// --------------------------------------
+
+.Tabs {
+    background-color: $cNeutral;
+    height: 0;
+    margin-top: 1rem;
+    overflow-y: hidden;
+    opacity: 0.0;
+    -webkit-transform: scale(0.0) translate3d(0,0,0);
+            transform: scale(0.0) translate3d(0,0,0);
+    -webkit-transition: -webkit-transform 250ms ease, opacity 250ms ease;
+            transition: transform 250ms ease, opacity 250ms ease;
+}
+
+.Tabs--white {
+    background-color: $cBg;
+
+    > .Tabs-content {
+        padding: 2.25rem 0 0.75rem;
+        @include bp(sm) { padding: 1.75rem 0 0.25rem; }
+    }
+}
+
+.Tabs.is-expanded {
+    height: auto;
+    overflow-y: initial;
+    opacity: 1.0;
+    -webkit-transform: scale(1.0) translate3d(0,0,0);
+            transform: scale(1.0) translate3d(0,0,0);
+}
+
+.Tabs-menu {
+    color: $cBeige;
+
+    a {
+        padding: 1rem 0;
+        border-bottom: 1px solid transparent;
+
+        &:hover,
+        &:active,
+        &.is-active {
+            color: $cBeige;
+            border-color: lighten($cBeige,10%);
+        }
+    }
+}
+
+// Expand component content (expanded state)
+// -----------------------------------------
+// Keyframes for animating opacity with 'display: none' toggle
+// without resorting to McCaw's transitionEnd callback.
+// http://christianheilmann.com/2013/09/19/quicky-fading-in-a-newly-created-element-using-css/
+
+@-webkit-keyframes fade {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+}
+
+@keyframes fade {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+}
+
+.Tabs-content {
+    padding: 2.25rem 2rem 0.75rem;
+    @include bp(sm) { padding: 1.75rem 1.5rem 0.25rem; }
+
+    > .Tabs-content--pane {
+        display: none;
+        opacity: 0.0;
+
+        &.is-active {
+            display: block;
+        }
+
+        &.is-opaque {
+            -webkit-animation: fade 250ms;
+                    animation: fade 250ms;
+            opacity: 1.0;
+        }
+    }
+
+    h2 {
+        @extend .Subheadline;
+    }
+
+    a.u-textRight:hover {
+        color: $cText;
+    }
+}
+
+
+// Ellipsis on mobile menus
+// --------------------------------------
+
+@include bp(sm) {
+    .Expand-menu a > p,
+    .Tabs-menu a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+
+// Conditions/Treatments vars
+// --------------------------------------
+
+#Conditions {
+    > .Expand-menu p,
+    > .Tabs .Tabs-menu a {
+        color: $cRed;
+
+        &:hover,
+        &:active {
+            border-color: $cRed;
+        }
+    }
+
+    a:hover,
+    a:active {
+        color: $cRed;
+    }
+
+    a.is-active {
+        color: $cRed;
+        border-color: $cRed;
+        &:hover,
+        &:active {
+            border-color: $cRed;
+        }
+    }
+
+    h1.Headline {
+        color: $cRed;
+    }
+}
+
+#Treatments {
+    margin-top: 0;
+
+    > .Expand-menu p,
+    > .Tabs .Tabs-menu a {
+        color: $cBeige;
+    }
+
+    h1.Headline {
+        color: $cBeige;
+    }
+
+    > .SectionRule {
+        &:after {
+            left: 20%;
+            right: 20%;
+        }
+    }
+}
+
+
+// Conditions/Treatments vars
+// --------------------------------------
+
+.faqs {
+    .TextSans--menu {
+        @extend .Text--grey;
+
+        &:hover,
+        &:focus,
+        &.is-active {
+            color: $cText;
+            border-color: lighten($cText,10%);
+        }
+    }
+}
+

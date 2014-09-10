@@ -1,0 +1,8 @@
+{
+    "settings": {
+        "tab_size": 4,
+        "Autoprefixer": {
+            "browsers": ["last 2 versions"]
+        }
+    }
+}

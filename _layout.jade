@@ -1,0 +1,46 @@
+!!! 5
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title= locals.title ? title + " | " + site_title : site_title
+        if current.path[0] === "index"
+            meta(name='description', content=description)
+        else
+            if current.path[0] === "blog"
+                meta(name='description', content=description)
+        meta(name="google-site-verification" content="1pkE36UC47oa1zT90irmHjFDm8PVuD9TNPAlkE8kVz8")
+        link(rel="stylesheet", href="/assets/css/app.css")
+        link(rel="stylesheet", href="/assets/css/suit-sm.css", media="only screen and (max-width: 480px)")
+
+    body(class="#{ current.path[0] } #{ current.path.join('-') }")
+        if current.path[0] === "index"
+            != yield
+
+        else
+            if current.path[0] === "blog"
+                != partial("/blog/_blog")
+            else if current.path[0] == 'about'
+                != yield
+            else if current.path[0] == 'faqs'
+                != yield
+            else if ["404"].indexOf(current.path[0]) !== -1
+                != yield
+
+        script(src="/assets/js/jquery.js")
+        script(src="/assets/js/jquery.stellar.min.js")
+        script(src="/assets/js/application.js")
+        script(src="/assets/js/modernizr.js")
+        script(type='text/javascript').
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '#{ locals.analytics_account }']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        //- .Load
+        //-     .Load-TextItalic &nbsp;
+        //-     .Load-TextBold &nbsp;

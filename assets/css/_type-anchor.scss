@@ -1,0 +1,70 @@
+
+/* ==================================================================
+
+    ANCHORS
+
+   ================================================================== */
+
+a {
+    font-family: inherit;
+    font-size: inherit;
+    color: $cText;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $cText;
+        text-decoration: none;
+    }
+}
+
+.noUnderline {
+    text-decoration: none;
+}
+
+/**
+ * Header
+ */
+
+hgroup {
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        .SiteName,
+        .SiteTag {
+            color: $cRed !important;
+        }
+    }
+}
+
+.PageTitle {
+    > a:hover {
+        // color: $cBeige;
+        color: $cRed;
+    }
+}
+
+/**
+ * Articles
+ */
+
+.ArticleTitle,
+.SectionRule {
+    > a:hover {
+        // color: lighten($cText,35%);
+        color: $cRed;
+    }
+}
+
+.Text--inlineAnchor:hover {
+    color: $cRed;
+}
+

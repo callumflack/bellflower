@@ -1,0 +1,16 @@
+section
+    h2.SectionRule
+        if current.path[0] === "faqs"
+            a(href="/blog/archive") Learn more on the blog
+        else
+            a(href="/blog/archive") Blog: health & well-being
+
+    for post, slug in public.blog._data
+        if post.ishome === true
+            article
+                h1.ArticleTitle
+                    a(href="/blog/#{ slug }")= post.title
+                if post.description
+                    p= post.description
+                        a.Text--inlineAnchor(href="/blog/#{ slug }") Read more
+

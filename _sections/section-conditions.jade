@@ -1,0 +1,59 @@
+section.Expand#Conditions
+    h2.SectionRule.SectionRule--red
+        a(href="#") Conditions Treated
+
+    .Expand-menu
+        .Grid.Grid--withGutter.Grid--alignCenter
+            .Grid-cell.u-size1of5
+                a(href="#musculoskeletal").u-sizeFill.u-textCenter
+                    img(src="/assets/img/icon-musculoskeletal.png")
+                    p.TextSans.TextSans--sm.u-textCenter
+                        | Musculoskeletal
+                        br
+                        | & Sports Injuries
+            .Grid-cell.u-size1of5
+                a(href="#stress").u-sizeFill.u-textCenter
+                    img(src="/assets/img/icon-stress.png")
+                    p.TextSans.TextSans--sm.u-textCenter Stress
+            .Grid-cell.u-size1of5
+                a(href="#pain").u-sizeFill.u-textCenter
+                    img(src="/assets/img/icon-pain.png")
+                    p.TextSans.TextSans--sm.u-textCenter Pain
+            .Grid-cell.u-size1of5
+                a(href="#menstrual").u-sizeFill.u-textCenter
+                    img(src="/assets/img/icon-menstrual.png")
+                    p.TextSans.TextSans--sm.u-textCenter Women's Health
+            .Grid-cell.u-size1of5
+                a(href="#fertility").u-sizeFill.u-textCenter
+                    img(src="/assets/img/icon-fertility.png")
+                    p.TextSans.TextSans--sm.u-textCenter
+                        | Fertility &
+                        br
+                        | IVF Support
+
+    .Tabs
+        .Tabs-menu
+            .Grid.Grid--withGutter.Grid--alignCenter
+                .Grid-cell.u-size1of5
+                    a(href="#musculoskeletal", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Musculoskeletal
+                .Grid-cell.u-size1of5
+                    a(href="#stress", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Stress
+                .Grid-cell.u-size1of5
+                    a(href="#pain", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Pain
+                .Grid-cell.u-size1of5
+                    a(href="#menstrual", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Women's Health
+                .Grid-cell.u-size1of5
+                    a(href="#fertility", data-toggle='tab').u-sizeFill.u-textCenter.TextSans.TextSans--menu Fertility
+
+        .Tabs-content
+            #musculoskeletal.Tabs-content--pane
+                != partial("section-conditions-musculo")
+            #stress.Tabs-content--pane
+                != partial("section-conditions-stress")
+            #pain.Tabs-content--pane
+                != partial("section-conditions-pain")
+            #menstrual.Tabs-content--pane
+                != partial("section-conditions-menstrual")
+            #fertility.Tabs-content--pane
+                != partial("section-conditions-fertility")
+

@@ -1,0 +1,54 @@
+
+/* ==================================================================
+
+    LAYOUT
+
+   ================================================================== */
+
+header,
+section,
+nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    margin-top: 6.5rem;
+
+    @include bp(md-down) {
+        margin-top: 70px;
+    }
+}
+
+
+// Container
+// ---------------------------------
+
+.Container {
+    width: 660px;
+    margin: 0 auto;
+    padding: 0;
+
+    @include bp(md-down) {
+        width: 100%;
+        padding: 0 36px;
+    }
+
+    @include bp(sm) {
+        padding: 0 24px;
+    }
+}
+
+/* Blog & About vars */
+
+body.blog,
+body.about {
+    .Container article {
+        margin-top: 6rem;
+
+        @include bp(sm) {
+            margin-top: 48px;
+        }
+    }
+}

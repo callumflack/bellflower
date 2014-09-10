@@ -1,0 +1,395 @@
+
+/* ==================================================================
+
+   TYPOGRAPHY
+
+   ================================================================== */
+
+
+// Type block margin defaults: placed first for easy overriding.
+// ------------------------------------------------------------------
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+ul {
+    margin: 0 0 1rem 3rem;
+    li { margin: 0; }
+
+    &.numbered {
+        // margin-left: 2.5rem;
+        li { margin-bottom: 1rem; }
+    }
+}
+
+@for $index from 1 through 6 {
+    h#{$index} {
+        margin: 0 0 1rem 0;
+    }
+}
+
+
+
+// p, ul & a
+// ------------------------------------------------------------------
+
+p,
+li {
+    @include rem-fallback(20);
+
+    > a,
+    > span {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+    }
+}
+
+ul {
+    list-style-type: disc;
+
+    &.numbered {
+        list-style-type: decimal;
+    }
+}
+
+// Vars
+// ---------------------------------
+
+.Text--emphasis { font-family: join($fontTextItalic, $serif-font-family); }
+// .Text--bold     { font-family: join($fontTextBold, $serif-font-family); }
+.Text--red      { color: $cRed; }
+.Text--neutral  { color: darken($cNeutral,50%); } //15%
+.Text--grey     { color: lighten($cText,35%); } //40
+.text--sm       { @include rem-fallback(17); }
+
+.TextSans {
+    font-family: join($fontReg, $sans-font-family);
+    @include rem-fallback(14);
+    line-height: 1.3;
+
+    // Size vars
+    &.TextSans--sm   { @include rem-fallback(12); }
+    &.TextSans--lg   { @include rem-fallback(20); }
+    &.TextSans--menu { @include rem-fallback(13); }
+}
+
+.Text--inlineEmph {
+    font-family: join($fontTextItalic, $serif-font-family);
+    margin-right: rem(5);
+}
+
+.Text--inlineNote {
+    font-family: join($fontTextItalic, $serif-font-family);
+    @include rem-fallback(17);
+
+    span {
+        @include rem-fallback(15);
+        text-transform: uppercase;
+    }
+}
+
+.Text--inlineAnchor {
+    font-family: join($fontText, $serif-font-family);
+    @include rem-fallback(16);
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/**
+ * Article drop-caps
+ */
+
+.about .Article,
+[class*="blog-"] .Article {
+    p:first-of-type:first-letter {
+        @include rem-fallback(104);
+        font-family: join($fontThin, $sans-font-family);
+        line-height: 1;
+        float: left;
+        padding: 4px 18px 0 18px;
+        margin-right: 14px;
+        border: 1px solid lighten($cText,40%);
+    }
+}
+
+.blog-how-does-acupuncture-work .Article {
+    p:first-of-type:first-letter {
+        @include rem-fallback(20);
+        font-family: join($fontText, $sans-font-family);
+        line-height: 1.5;
+        float: none;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+}
+
+
+
+
+// Headlines
+// ------------------------------------------------------------------
+
+@for $index from 1 through 6 {
+    h#{$index} {
+        @include rem-fallback(16);
+        font-family: join($fontBold, $sans-font-family);
+        font-weight: normal;
+        line-height: 1.25;
+
+        /* inline inheritance */
+        > a,
+        > span {
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+        }
+
+        /* link interaction */
+        > a {
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                // color: $cRed;
+                // text-decoration: none;
+            }
+        }
+    }
+}
+
+
+// hgroup
+// ---------------------------------
+
+// h1
+.SiteName {
+    @include rem-fallback(58);
+    font-family: join($fontMasthead, $sans-font-family);
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 0.25rem;
+
+    @include bp(md-down) { font-size: 44px; }
+    @include bp(sm)      { font-size: 32px; }
+}
+
+// h2
+.SiteSub {
+    @include rem-fallback(40);
+    font-family: join($fontTitleItalic, $sans-font-family);
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 0.75rem;
+
+    @include bp(md-down) { font-size: 44px; }
+    @include bp(sm)      { font-size: 26px; } //36
+}
+
+// h3
+.SiteTag {
+    @include rem-fallback(14);
+    font-family: join($fontBold, $sans-font-family);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+    color: white !important;
+    margin-top: 0.5rem !important;
+
+    @include bp(md-down) {
+        margin-top: 3px;
+        font-size: 13px;
+    }
+
+    @include bp(sm) {
+        margin-bottom: -4px;
+        font-size: 9px;
+    }
+}
+
+// h3: chain both classes
+.PageTitle {
+    @extend .ArticleTitle;
+    font-family: join($fontTitleItalic, $sans-font-family) !important;
+    color: white !important;
+    padding-top: 1.5rem;
+}
+
+.TitleRule:before {
+    content: " ";
+    display: block;
+    position: relative;
+    top: -22px;
+    border-top: 1px solid rgba(255,255,255,0.6);
+
+    @include bp(md-down) {
+        top: -19px;
+        margin: 0 9rem;
+    }
+
+    @include bp(sm) {
+        top: -14px;
+        margin: 0 7.5rem;
+    }
+}
+
+// p
+.SiteSummary {
+    font-family: join($fontTitleItalic, $sans-font-family) !important;
+    @include rem-fallback(28);
+    margin: 0.5rem -4rem 1.25rem;
+
+    @include bp(md-down) {
+        margin: 8px 48px 20px;
+    }
+
+    @include bp(sm) {
+        font-family: join($fontTextItalic, $sans-font-family) !important;
+        font-size: 16px;
+        margin: 8px 12px;
+    }
+}
+
+
+// Article headlines
+// ---------------------------------
+
+// Primary style: Blog index h1
+.ArticleTitle {
+    @include rem-fallback(32);
+    font-family: join($fontTitle, $sans-font-family);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.03rem;
+    color: $cText;
+    border: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 2.25rem;
+
+    @include bp(md-down) { font-size: 24px; }
+    // @include bp(sm) { font-size: 22px; }
+}
+
+// Blog post h1
+[class*="blog-"] .Article .ArticleTitle {
+    @include rem-fallback(40);
+    margin-bottom: 3.5rem;
+}
+
+// Home post h1
+.index .Article .ArticleTitle {
+    margin-top: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+%h2 {
+    font-size: 13px;
+    font-family: join($fontMed, $sans-font-family);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $cText;
+    margin-top: 1.5rem;
+
+    @include bp(sm) { font-size: 10.5px !important; }
+    // @include bp(md) { font-size: 13.5px; }
+}
+
+// Within paragraph headline (h3)
+.Article > h3,
+.Subheadline {
+    font-family: join($fontText, $serif-font-family);
+    @include rem-fallback(20);
+    line-height: 1.5;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+
+// NB: no classes available in markdown
+article h3 {
+    @extend .Subheadline;
+}
+
+
+// .Expand tab headline
+// ---------------------------------
+
+.Headline {
+    @include rem-fallback(23);
+    font-family: join($fontTypes, $serif-font-family);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1.5rem; //2
+    margin-bottom: 2.5rem;
+}
+
+// Ruled section headline
+// ---------------------------------
+
+.SectionRule {
+    @extend %h2;
+    line-height: 1;
+    position: relative;
+    margin-top: 2.25rem;
+
+    @include bp(sm) { font-size: 10.5px !important; }
+
+    a,
+    time {
+        // color: lighten($cText,10%);
+        letter-spacing: 0.5px;
+        background-color: $cBg;
+        padding: 0 0.5rem;
+    }
+
+    span {
+        background-color: $cBg;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: 0;
+        right: 0;
+        border-top: solid 1px $cLite;
+        z-index: -1;
+    }
+
+    &.SectionRule--red {
+        a,
+        span {
+            color: $cRed;
+        }
+
+        &:after {
+            border-color: lighten($cRed,35%);
+        }
+    }
+
+    &.SectionRule--neutral {
+        a,
+        span {
+            color: $cBeige;
+        }
+
+        a:hover {
+            color: $cBeige;
+        }
+
+        &:after {
+            border-color: lighten($cBeige,35%);
+        }
+    }
+}
+

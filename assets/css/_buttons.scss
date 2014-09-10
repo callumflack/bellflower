@@ -1,0 +1,119 @@
+
+/* ==================================================================
+
+   BUTTONS
+
+   ================================================================== */
+
+/**
+ * Req'd to enable an inline rule
+ * beneath "Button--primary".
+ */
+
+.ButtonContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 49%;
+        left: 0;
+        right: 0;
+        display: block;
+        border-top: solid 1px $cText;
+        z-index: -1;
+    }
+
+    &.ButtonContainer--noRule {
+        &:before,
+        &:after {
+            border-color: transparent;
+        }
+    }
+
+    &.ButtonContainer--transpRule {
+        &:before,
+        &:after {
+            border-color: white;
+            z-index: initial;
+        }
+
+        &:before {
+            right: 358px;
+        }
+
+        &:after {
+            left: 358px;
+        }
+
+        @include bp(md-down) {
+            &:before,
+            &:after  {
+                display: none;
+            }
+        }
+    }
+}
+
+/**
+ * Name-spaced to avoid Suit clash.
+ */
+
+.Button--primary {
+    @include rem-fallback(20);
+    font-family: $fontMed;
+    line-height: 1;
+    text-transform: uppercase;
+    position: relative;
+    padding: rem(16) rem(23);
+    background-color: $cBg;
+    border: 1px solid $cText;
+    border-radius: rem(8);
+
+    &:hover {
+        background-color: $cRed;
+        border-color: $cRed;
+        color: white;
+    }
+
+    /**
+     * Optional smaller size var
+     */
+
+    &.Button--primary-md {
+        @include bp(sm) {
+            font-size: 14px;
+            margin-top: 0.75rem;
+            margin-bottom: 2.25rem;
+            padding: 9px 12px;
+        }
+    }
+}
+
+/**
+ * Reverse color var
+ */
+
+.Button--white {
+    color: white;
+    border-color: white;
+
+    &:hover {
+        background-color: white;
+        border-color: white;
+        color: $cText;
+    }
+}
+
+/**
+ * For use with ".ButtonContainer--transpRule"
+ */
+
+.Button--transparent {
+    background-color: transparent;
+}
+

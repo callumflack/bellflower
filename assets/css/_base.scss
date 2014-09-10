@@ -1,0 +1,57 @@
+
+/* ==================================================================
+
+   BASE
+
+   ================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+// Handle viewport tags in IE10+
+// and set up for the future.
+@-ms-viewport { width: device-width; zoom: 1.0; }
+ @-o-viewport { width: device-width; zoom: 1.0; }
+   @-viewport { width: device-width; zoom: 1.0; }
+
+// Typography base setting
+// 1. Fluid scroll for Safari mobile.
+html {
+    background-color: $cBg;
+    color: $cText;
+    font-family: join($fontText, $serif-font-family);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    //* 1
+
+    @include bp(md-down) {
+        font-size: 14.5px;
+    }
+
+    @include bp(sm) {
+        font-size: 12.5px;
+    }
+}
+
+// Reset space & ensure full browser height
+html,
+body {
+    // height: 100%;
+    padding: 0;
+    margin: 0;
+}
+

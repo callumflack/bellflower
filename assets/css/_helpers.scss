@@ -1,0 +1,42 @@
+
+/* ==================================================================
+
+   HELPERS
+
+   ================================================================== */
+
+
+// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+// ================================
+
+img {
+    vertical-align: middle;
+}
+
+
+// Hide or show things responsively
+// ================================
+
+.HideDesk {
+    display: none;
+    @include bp(md-down) { display: block; }
+}
+
+.HideMobile {
+    @include bp(md-down) { display: none; }
+}
+
+
+// Spacers
+// ================================
+
+.marginTN { margin-top: 0 !important; }
+.marginTS { margin-top: 1rem !important; }
+.marginTM { margin-top: 1.5rem !important; }
+
+.marginBS { margin-bottom: 1.75rem !important; }
+
+.xs-marginTN { @include bp(sm) { margin-top: 0 !important; } }
+.xs-marginTS { @include bp(sm) { margin-top: 10px !important; } }
+.sm-marginTS { @include bp(md-down) { margin-top: 10px !important; } }
+

@@ -1,0 +1,54 @@
+
+/* ==========================================================================
+
+   SETTINGS
+
+   ========================================================================== */
+
+
+/* Fonts
+   -------------------------------------------------------------------------- */
+
+@include font-face('Lyon Text Regular', '/assets/fonts/Lyon Text-Regular');
+@include font-face('Lyon Text Regular Italic', '/assets/fonts/Lyon Text-Regular Italic');
+@include font-face('Lyon Display Light', '/assets/fonts/LyonDisplay-Light');
+@include font-face('Lyon Display Light Italic', '/assets/fonts/LyonDisplay-LightItalic');
+@include font-face('Mercury Display', '/assets/fonts/MercuryDisplay-Roman');
+@include font-face('Mercury Display Bold', '/assets/fonts/MercuryDisplay-Bold');
+
+@include font-face('theinhardt_thinregular', '/assets/fonts/theinhardtthin-webfont');
+@include font-face('theinhardt_regular', '/assets/fonts/theinhardtreg-webfont');
+@include font-face('theinhardt_lightbold', '/assets/fonts/theinhardtmed-webfont');
+@include font-face('theinhardt_bold', '/assets/fonts/theinhardtbold-webfont');
+
+$fontText           : 'Lyon Text Regular';
+$fontTextItalic     : 'Lyon Text Regular Italic';
+$fontMasthead       : 'Mercury Display';
+$fontTypes          : 'Mercury Display Bold';
+$fontTitle          : 'Lyon Display Light';
+$fontTitleItalic    : 'Lyon Display Light Italic';
+
+$fontThin           : 'theinhardt_thinregular';
+$fontReg            : 'theinhardt_regular';
+$fontMed            : 'theinhardt_lightbold';
+$fontBold           : 'theinhardt_bold';
+
+$sans-font-family   : "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$serif-font-family  : Georgia, Times, serif;
+
+
+/* Colours
+   -------------------------------------------------------------------------- */
+
+$cText              : #222;
+$cText50            : #999;
+$cText20            : #aaa;
+$cLite              : lighten($cText,65%);
+$cNeutral           : lighten(#f2f2ed,1%);
+$cBeige             : darken($cNeutral,55%);
+$cPaper             : #FFFCCC;
+$cWhite             : white;
+$cLink              : #222;
+$cRed               : #dd0000;
+$cBg                : #fdfdfd;
+

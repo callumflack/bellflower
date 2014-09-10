@@ -1,0 +1,33 @@
+header.CoverImage--header.FlexEmbed.FlexEmbed--ratio#Top(data-stellar-background-ratio='0.5')
+    .HeadlinePosition
+        .Container
+            hgroup
+                a(href="/")
+                    h1.SiteName Bellflower
+                    h2.SiteTag Acupuncture • Chinese Herbal Medicine • Shiatsu
+
+            if current.path[0] === "index"
+                p.SiteSummary
+                    | Bellflower Chinese Medicine is the practice of Thomas Crooks. Accredited member of the Australian Acupuncture & Chinese Medicine Association and AHPRA registered.
+
+                .ButtonContainer.ButtonContainer--transpRule
+                    a.Button.Button--primary.Button--primary-md.Button--transparent.Button--white(href="mailto:info@bellflowerchinesemedicine.com.au") Make a booking
+
+                section.HideMobile.Locations.Locations--white
+                    != partial("/locations")
+
+            else if current.path[0] === "about"
+                h3.PageTitle.TitleRule About Thomas Crooks.
+
+            else if current.path[0] === "blog"
+                h3.PageTitle.TitleRule
+                    a(href="/blog/archive") A <span>blog</span> about well-being.
+
+            else if current.path[0] === "faqs"
+                h3.PageTitle.TitleRule Frequently Asked Questions.
+
+if current.path[0] === "index"
+    .HideDesk.LocationsContainer--sm
+        .Container
+            section.Locations
+                != partial("/locations")
