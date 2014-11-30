@@ -1,0 +1,7 @@
+There has been a fair bit of media in the last couple of weeks around universities providing education in complementary and alternative medicine (CAM). Lobby group Friends of Science in Medicine are petitioning universities to have CAM courses thrown out and are trying to persuade private health insurance companies to cease providing rebates for the provision of CAM services. 
+
+Understandably, practitioners of these types of medicines and their representative bodies are mounting a defence to this attack, suggesting that the Friends of Science in Medicine are misinformed in their criticisms. The very universities that provide training in CAM modalities (such as Traditional Chinese Medicine) are at the research forefront, continuing to build a solid evidence base. The evidence that practices such as acupuncture and Chinese herbal medicine have measurable and replicable effects is growing. 
+
+If you feel passionate about complementary medicine and believe it does have a valid place within the Australia healthcare system (and the research shows that many Aussies do!) please consider informing yourself more and signing this petition to show your support.
+
+[Sign the petition](http://www.change.org/petitions/protect-university-education-in-natural-medicine#) to show your support.
