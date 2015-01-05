@@ -168,3 +168,43 @@
 .u-sm-size11of12 {
   width: calc(100% * 11 / 12) !important;
 }
+
+/* Proportional offsets: breakpoint 1 (small)
+   ========================================================================== */
+
+/**
+ * Specify the proportional offset before an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
+ */
+
+.u-sm-before0of12 {
+  margin-left: 0 !important;
+}
+
+.u-sm-before1of12 {
+  margin-left: 8.333333333333332% !important;
+}
+
+/**
+ * Make an element shrink wrap its content.
+ */
+
+.u-sm-sizeFit {
+  display: block !important;
+  float: left !important;
+  width: auto !important;
+}
+
+/**
+ * Make an element fill the remaining space.
+ * N.B. This will hide overflow.
+ */
+
+.u-sm-sizeFill {
+  display: block !important;
+  overflow: hidden !important;
+  width: auto !important;
+}
+
+
