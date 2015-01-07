@@ -85,23 +85,21 @@ p.Ruled {
 
 /* Social icons w/i contact column */
 
-.Grid.u-cf {
-    .socialIcon {
-        margin-top: rem(12);
+.socialIcon {
+    // margin-top: rem(12);
 
-        > a {
-            text-decoration: none;
-        }
+    > a {
+        text-decoration: none;
+    }
 
-        > a i {
-            font-size: 32px;
-            color: lighten($cText,40%);
-            margin-bottom: 0;
-        }
+    > a i {
+        font-size: 32px;
+        color: lighten($cText,40%);
+        margin-bottom: 0;
+    }
 
-        a + a {
-            margin-left: 8px;
-        }
+    a + a {
+        margin-left: 8px;
     }
 }
 
