@@ -87,6 +87,8 @@ p.Ruled {
 
 .socialIcon {
     // margin-top: rem(12);
+    position: relative;
+    top: -3px;
 
     > a {
         text-decoration: none;
