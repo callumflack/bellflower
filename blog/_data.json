@@ -1,18 +1,11 @@
 {
-    "dit-da-medicine-and-herbal-ice": {
-        "title": "Dit Da (Hit-Fall Medicine) and 'Herbal Ice' (San Huang San)",
-        "date": "April 21, 2015",
-        "author": "thomas-crooks",
-        "description": "Many people are unaware of the specialty area within Chinese medicine known as 'Dit Da' medicine. This translates literally as 'Hit-Fall' medicine and is a field of practice that developed alongside the Chinese martial arts. In our day, it can be used to deal with any of these types of injuries that happen through accident or exercise in everyone's daily life.  ",
-        "ispublished": true,
-        "ishome": true
-    },
     "getting-good-sleep-dos-and-donts": {
         "title": "Getting good sleep: the do's and don't's",
         "date": "September 07, 2013",
         "author": "thomas-crooks",
         "description": "A large number of the people I treat in the clinic suffer from poor sleep. It is a serious problem that can significantly impact on our stress levels, energy levels and quality of life. Many people are missing out on the rest and rejuvenation that occurs with deep sleep. ",
-        "ispublished": true
+        "ispublished": true,
+        "ishome": true
     },
     "eating-well-in-winter": {
         "title": "Eating well in Winter",
