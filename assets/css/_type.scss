@@ -101,16 +101,24 @@ ul {
  * Article drop-caps
  */
 
+@mixin dropCap {
+    @include rem-fallback(104);
+    font-family: join($fontThin, $sans-font-family);
+    line-height: 1;
+    float: left;
+    padding: 4px 18px 0 18px;
+    margin-right: 14px;
+    border: 1px solid lighten($cText,40%);
+}
+
 .about .Article,
 [class*="blog-"] .Article {
     p:first-of-type:first-letter {
-        @include rem-fallback(104);
-        font-family: join($fontThin, $sans-font-family);
-        line-height: 1;
-        float: left;
-        padding: 4px 18px 0 18px;
-        margin-right: 14px;
-        border: 1px solid lighten($cText,40%);
+        @include dropCap;
+    }
+
+    p img {
+        margin-bottom: 1.75rem;
     }
 }
 
@@ -126,6 +134,11 @@ ul {
     }
 }
 
+.blog-dit-da-medicine-and-herbal-ice .Article {
+    p:nth-of-type(2):first-letter {
+        @include dropCap;
+    }
+}
 
 
 
