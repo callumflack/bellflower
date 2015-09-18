@@ -1,4 +1,4 @@
-![San Huang San (Herbal ice) ](/assets/img/sanhuangsan.jpg)
+![San Huang San (Herbal ice) ](/assets/img/blog-sanhuangsan.jpg)
 
 Many people are unaware of the specialty area within Chinese medicine known as 'Dit Da' medicine. This translates literally as 'Hit-Fall' medicine and is a field of practice that developed alongside the Chinese martial arts. 'Dit Da' medicine was initially aimed at dealing with the types of musculoskeletal injuries that occured as a result of martial arts training — bruises, contusions, strains, sprains, cracked ribs, dislocations, bleeding and so on — at all stages of their presentation. In our day, it can be used to deal with any of these types of injuries that happen through accident or exercise in everyone's daily life. There is a huge number of herbal formulas, liniments, poultices, plasters and methods of applying acupuncture, cupping, moxibustion and gua sha (scraping) for dealing with traumatic injuries.
 
