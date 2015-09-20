@@ -122,6 +122,7 @@ ul {
     }
 }
 
+// remove dropCap
 .blog-how-does-acupuncture-work .Article {
     p:first-of-type:first-letter {
         @include rem-fallback(20);
@@ -134,12 +135,17 @@ ul {
     }
 }
 
-.blog-dit-da-medicine-and-herbal-ice .Article {
-    p:nth-of-type(2):first-letter {
-        @include dropCap;
-    }
+/**
+ * Article images
+ */
+
+figure {
+    margin-bottom: 2rem;
 }
 
+figure img {
+    max-width: 100%;
+}
 
 
 // Headlines
@@ -405,4 +411,3 @@ article h3 {
         }
     }
 }
-
