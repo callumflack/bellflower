@@ -1,3 +1,15 @@
+LOGINS
+=========================================
+Godaddy
+Account number/login: 66540052
+Password: Thursd8y!
+
+
+DEPLOY
+=========================================
+Deployed thru heroku browser admin or $ git push heroku master after pushing to the Github master.
+
+
 REF
 =========================================
 - https://github.com/kbsali/kevin.saliou.name
@@ -24,7 +36,7 @@ TO DO
 - icon sprite!
 
 # DEPLOY
-- postprocess gulp file: 
+- postprocess gulp file:
     > !https://github.com/postcss/autoprefixer
     > !https://github.com/addyosmani/critical-path-css-demo
     > !https://github.com/giakki/uncss
