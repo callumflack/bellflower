@@ -111,12 +111,11 @@ $(document).ready(function() {
     // init Stellar parallax
     // ================================
     // don't init if mobile
-    if(!Modernizr.touch){
-        $.stellar({
-            horizontalScrolling: false,
-            verticalOffset: 50,
-            responsive: true
-        });
-    }
+    // if(!Modernizr.touch){
+    //     $.stellar({
+    //         horizontalScrolling: false,
+    //         verticalOffset: 50,
+    //         responsive: true
+    //     });
+    // }
 });
-
