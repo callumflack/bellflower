@@ -213,14 +213,15 @@ figure img {
     @include bp(sm)      { font-size: 26px; } //36
 }
 
-// h3
-.SiteTag {
+// h2/h3
+.SiteTag,
+.SiteContact {
     @include rem-fallback(14);
     font-family: join($fontBold, $sans-font-family);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.03rem;
-    color: white !important;
+    color: white;
     margin-top: 0.5rem !important;
 
     @include bp(md-down) {
@@ -229,8 +230,17 @@ figure img {
     }
 
     @include bp(sm) {
-        margin-bottom: -4px;
+        // margin-bottom: -4px;
         font-size: 9px;
+    }
+
+    @include when-inside(".HideDesk") { color: $cText; }
+    @include when-inside("footer") { color: $cText; }
+}
+
+.SiteTag {
+    @include bp(sm) {
+        margin-bottom: -4px;
     }
 }
 

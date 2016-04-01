@@ -34,7 +34,7 @@ img {
 .marginTS { margin-top: 1rem !important; }
 .marginTM { margin-top: 1.5rem !important; }
 
-.marginBS { margin-bottom: 1.75rem !important; }
+.marginBS { margin-bottom: 1.85rem !important; }
 
 .xs-marginTN { @include bp(sm) { margin-top: 0 !important; } }
 .xs-marginTS { @include bp(sm) { margin-top: 10px !important; } }
@@ -51,3 +51,20 @@ img {
 .Grid--withGutterLg > .Grid-cell {
   padding: 0 15px;
 }
+
+
+
+// Horizontal Rules (replacing HRs)
+
+@mixin HorizontalRule(
+    $mixin-color: $cWhite,
+    $mixin-weight: 1px
+) {
+    border-top: $mixin-weight solid $mixin-color;
+    height: $mixin-weight;
+    margin: 0.65rem 0 0.85rem;
+}
+
+.HzRule          { @include HorizontalRule(); }
+.HzRule--white   { @include HorizontalRule(); }
+// .msm-HzRule      { @include respond-to(max-sm) { @include HorizontalRule(); } }
